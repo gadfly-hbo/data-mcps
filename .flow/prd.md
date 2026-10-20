@@ -176,3 +176,4 @@
 - 包 7 请求拓扑口径修订：默认每城一请求（maxRequests=城市数）；分页演练（pagesPerCity>1）为适配器内部逻辑页拆分，此时请求数=城市×页数，UI 如实计算显示。
 - 包 4 的 `snapshots/index.json` 不建：登记=目录扫描（`.tmp-` 前缀过滤），原子 rename 语义不变；量小可接受，R3+ 如需跨项目索引再评（handoff 已披露）。
 - `.playwright-cli/` 会话缓存移出版本控制（浏览器证据只留 evidence/ 截图与检查 JSON）。
+- 包 16 端口策略修订（2026-10-20，用户指令对齐 metric-factory 惯例）：启动脚本层 4173 占用 → 响亮提示并顺延 4174；CLI 层仍拒绝静默换端口（占用即报错退出）。一键入口为根目录 `启动工作台.command` → `scripts/start-ui.sh`（Finder 双击可运行），环境变量 `DATA_MCPS_PORT` / `DATA_MCPS_NO_OPEN` / `DATA_MCPS_DATA_ROOT`。

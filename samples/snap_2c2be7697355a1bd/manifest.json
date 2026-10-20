@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "identity": {
+    "snapshotId": "snap_2c2be7697355a1bd",
+    "parentSnapshotId": null,
+    "createdAtUtc": "2026-10-20T02:22:45.000Z"
+  },
+  "source": {
+    "sourceId": "wx-synthetic",
+    "providerName": "data-mcps 合成夹具",
+    "protocol": "rest",
+    "adapterVersion": "wx-fixture@1",
+    "toolCatalogFingerprint": null,
+    "synthetic": true
+  },
+  "query": {
+    "capabilityId": "wx.daily",
+    "templateRevision": "wx.daily@1",
+    "connectionRevision": 1,
+    "params": {
+      "cities": [
+        {
+          "id": "shanghai",
+          "name": "上海",
+          "lat": 31.2304,
+          "lon": 121.4737
+        },
+        {
+          "id": "hangzhou",
+          "name": "杭州",
+          "lat": 30.2741,
+          "lon": 120.1551
+        }
+      ],
+      "start": "2026-09-01",
+      "end": "2026-09-07",
+      "timezone": "Asia/Shanghai",
+      "variables": [
+        "tempMeanC",
+        "precipSum"
+      ],
+      "scenario": {}
+    },
+    "paramsFingerprint": "c1598f4511a519d0db6e12fe7d9b55d491245073c7810d7f1b248a4921f063f0",
+    "requestCount": 2,
+    "pageCount": 2
+  },
+  "coverage": {
+    "requested": {
+      "cities": [
+        {
+          "id": "shanghai",
+          "name": "上海",
+          "lat": 31.2304,
+          "lon": 121.4737
+        },
+        {
+          "id": "hangzhou",
+          "name": "杭州",
+          "lat": 30.2741,
+          "lon": 120.1551
+        }
+      ],
+      "start": "2026-09-01",
+      "end": "2026-09-07",
+      "timezone": "Asia/Shanghai",
+      "variables": [
+        "tempMeanC",
+        "precipSum"
+      ],
+      "scenario": {}
+    },
+    "actual": {
+      "rows": 14,
+      "incompleteReasons": [],
+      "cacheAgeHours": null
+    },
+    "timezone": "Asia/Shanghai",
+    "units": {
+      "tempMeanC": "°C",
+      "precipSum": "mm"
+    },
+    "coordinates": {
+      "requested": [
+        [
+          31.2304,
+          121.4737
+        ],
+        [
+          30.2741,
+          120.1551
+        ]
+      ],
+      "responded": [
+        [
+          31.2304,
+          121.4737
+        ],
+        [
+          30.2741,
+          120.1551
+        ]
+      ]
+    }
+  },
+  "time": {
+    "collectedAtUtc": "2026-10-20T02:22:45.000Z",
+    "sourceUpdatedAt": "unknown",
+    "sourceTimezone": "Asia/Shanghai"
+  },
+  "quality": {
+    "expectedCount": 14,
+    "actualCount": 14,
+    "missingKeys": [],
+    "duplicateKeys": [],
+    "fieldIssues": [],
+    "unitTimezoneOk": true,
+    "paginationComplete": true,
+    "conclusion": "complete",
+    "ruleVersion": "wx-quality@1",
+    "checkedAtUtc": "2026-10-20T02:22:44.716Z"
+  },
+  "license": {
+    "summary": "合成数据，仅用于产品演示与验收",
+    "sourceUrl": "https://example.invalid/synthetic",
+    "checkedAt": "2026-10-20",
+    "exportAllowed": true,
+    "modelAllowed": false,
+    "retentionNote": "合成内容可保留；不代表任何真实供应商条款",
+    "synthetic": true
+  },
+  "cost": {
+    "knownness": "demo_no_call",
+    "note": "演示无真实调用（≠ 供应商免费）"
+  },
+  "files": [
+    {
+      "path": "content.json",
+      "sha256": "bf3d1775bad686e3e608d6dbb4d0a8af04983b7c5b981760b285aed9f6b2f23d",
+      "size": 1146
+    },
+    {
+      "path": "raw/hangzhou.json",
+      "sha256": "d898955c9f52d26af77b6682550556928e768ef5f6439733badf7dbb6f1f0553",
+      "size": 342
+    },
+    {
+      "path": "raw/shanghai.json",
+      "sha256": "8d617e4c7755f233320a1c807489d69ae2e3e8970801fe609fd59fb262bf5d4c",
+      "size": 338
+    }
+  ],
+  "rawRetained": true,
+  "rawRetainedReason": "合成夹具许可允许保留原响应"
+}

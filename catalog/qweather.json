@@ -1,0 +1,60 @@
+{
+  "id": "qweather",
+  "name": "和风天气（备选）",
+  "summary": "天气 REST API：日预报、JWT/API Key 鉴权与署名要求已有官方文档。预报 ≠ 历史观测。",
+  "domain": "天气",
+  "provider": {
+    "name": "QWeather",
+    "url": "https://dev.qweather.com"
+  },
+  "connector": {
+    "protocol": "rest",
+    "adapterVersion": null,
+    "coverage": "以用户账户产品权限为准",
+    "granularity": "城市×日（预报）",
+    "latency": "待核实"
+  },
+  "status": {
+    "docsVerified": {
+      "ok": true,
+      "at": "2026-10-19",
+      "evidence": "https://dev.qweather.com/en/docs/api/weather/weather-daily-forecast/"
+    },
+    "adaptationVerified": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "accountChecked": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "envTested": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    }
+  },
+  "cost": {
+    "knownness": "unknown",
+    "note": "账户产品权限与价格未核实",
+    "checkedAt": "2026-10-19"
+  },
+  "license": {
+    "summary": "署名要求与使用限制见官方文档；历史数据是否匹配任务待核实",
+    "sourceUrl": "https://dev.qweather.com/en/docs/terms/restriction/",
+    "checkedAt": "2026-10-19",
+    "exportAllowed": false,
+    "modelAllowed": false,
+    "retentionNote": "备选来源；不把预报当历史观测"
+  },
+  "auth": {
+    "kind": "jwt",
+    "note": "JWT/API Key；需用户账户"
+  },
+  "exampleShape": "daily[] 逐日预报字段组（官方文档形态；预报≠历史观测）",
+  "synthetic": false,
+  "connectable": false,
+  "capabilities": []
+}

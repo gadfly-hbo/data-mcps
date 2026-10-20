@@ -1,0 +1,60 @@
+{
+  "id": "open-meteo",
+  "name": "Open-Meteo 历史天气",
+  "summary": "按地点/日期/变量检索历史逐日天气的 REST API（再分析数据，非门店观测真值）。",
+  "domain": "天气",
+  "provider": {
+    "name": "Open-Meteo",
+    "url": "https://open-meteo.com"
+  },
+  "connector": {
+    "protocol": "rest",
+    "adapterVersion": "openmeteo-daily@1",
+    "coverage": "全球网格再分析；按坐标查询",
+    "granularity": "坐标×日（逐日变量）",
+    "latency": "历史数据按源更新节奏，未核实"
+  },
+  "status": {
+    "docsVerified": {
+      "ok": true,
+      "at": "2026-10-19",
+      "evidence": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "adaptationVerified": {
+      "ok": true,
+      "at": "2026-10-20",
+      "evidence": "本仓 src/adapters/weatherDaily.ts 实现与夹具测试"
+    },
+    "accountChecked": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "envTested": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    }
+  },
+  "cost": {
+    "knownness": "doc_hint",
+    "note": "免费 API 限非商业用途；商业使用、额度与价格未核实",
+    "checkedAt": "2026-10-19"
+  },
+  "license": {
+    "summary": "数据许可与 API 服务使用条件分别核对；免费层限非商业用途",
+    "sourceUrl": "https://open-meteo.com/en/terms",
+    "checkedAt": "2026-10-19",
+    "exportAllowed": false,
+    "modelAllowed": false,
+    "retentionNote": "未核实真实运行不准入；许可边界待用户授权后核对"
+  },
+  "auth": {
+    "kind": "none",
+    "note": "免费层无需密钥（非商业）；商业层鉴权未核实"
+  },
+  "exampleShape": "daily.time[] / temperature_2m_mean[] / precipitation_sum[] + daily_units + timezone（官方文档形态）→ 行：city, date, tempMeanC, precipSum",
+  "synthetic": false,
+  "connectable": false,
+  "capabilities": []
+}

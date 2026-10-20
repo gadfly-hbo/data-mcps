@@ -1,0 +1,60 @@
+{
+  "id": "questmobile-truth",
+  "name": "QuestMobile TRUTH 品牌洞察",
+  "summary": "品牌流量、画像与营销洞察商业产品。接入协议、导出许可与价格全部待核实；当前不可用。",
+  "domain": "品牌画像",
+  "provider": {
+    "name": "QuestMobile",
+    "url": "https://www.questmobile.com.cn"
+  },
+  "connector": {
+    "protocol": "none",
+    "adapterVersion": null,
+    "coverage": "待核实（品牌/平台/地域/期限以合同为准）",
+    "granularity": "待核实",
+    "latency": "待核实"
+  },
+  "status": {
+    "docsVerified": {
+      "ok": true,
+      "at": "2026-10-19",
+      "evidence": "https://www.questmobile.com.cn/products/truth/"
+    },
+    "adaptationVerified": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "accountChecked": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "envTested": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    }
+  },
+  "cost": {
+    "knownness": "unknown",
+    "note": "商业产品，价格/额度未核实",
+    "checkedAt": "2026-10-19"
+  },
+  "license": {
+    "summary": "商业合同待用户提供；导出、缓存、再分发、模型外发全部待核实",
+    "sourceUrl": "https://www.questmobile.com.cn/products/truth/",
+    "checkedAt": "2026-10-19",
+    "exportAllowed": false,
+    "modelAllowed": false,
+    "retentionNote": "未授权：查询在本地阻断，请求数 0"
+  },
+  "auth": {
+    "kind": "none",
+    "note": "商业授权待用户提供"
+  },
+  "exampleShape": "待核实（未适配；账户/导出接口未授权）",
+  "synthetic": false,
+  "connectable": false,
+  "capabilities": []
+}

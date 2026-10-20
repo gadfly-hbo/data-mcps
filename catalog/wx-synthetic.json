@@ -1,0 +1,67 @@
+{
+  "id": "wx-synthetic",
+  "name": "合成天气样板（演示）",
+  "summary": "明确标注的合成天气夹具：上海/杭州逐日气温与降水，用于走通发现→连接→查询→质量→快照→交付闭环。不声称来自任何供应商。",
+  "domain": "天气",
+  "provider": {
+    "name": "data-mcps 合成夹具",
+    "url": "https://example.invalid/synthetic"
+  },
+  "connector": {
+    "protocol": "rest",
+    "adapterVersion": "wx-fixture@1",
+    "coverage": "预置城市：上海、杭州（WGS84 坐标已确认）",
+    "granularity": "城市×日",
+    "latency": "合成，无源时效"
+  },
+  "status": {
+    "docsVerified": {
+      "ok": true,
+      "at": "2026-10-20",
+      "evidence": "评审包方案.md §10 官方文档核对"
+    },
+    "adaptationVerified": {
+      "ok": true,
+      "at": "2026-10-20",
+      "evidence": "本仓夹具适配器与测试"
+    },
+    "accountChecked": {
+      "ok": false,
+      "at": "2026-10-20",
+      "evidence": null
+    },
+    "envTested": {
+      "ok": true,
+      "at": "2026-10-20",
+      "evidence": "本仓测试与浏览器证据"
+    }
+  },
+  "cost": {
+    "knownness": "demo_no_call",
+    "note": "演示无真实调用（≠ 供应商免费）",
+    "checkedAt": "2026-10-20"
+  },
+  "license": {
+    "summary": "合成数据，仅用于产品演示与验收",
+    "sourceUrl": "https://example.invalid/synthetic",
+    "checkedAt": "2026-10-20",
+    "exportAllowed": true,
+    "modelAllowed": false,
+    "retentionNote": "合成内容可保留；不代表任何真实供应商条款"
+  },
+  "auth": {
+    "kind": "none",
+    "note": "合成源无需凭据（占位引用）"
+  },
+  "exampleShape": "daily.time[] / temperature_2m_mean[] / precipitation_sum[] + daily_units + timezone（仿官方示例形态，合成值）→ 行：city, date, tempMeanC, precipSum",
+  "synthetic": true,
+  "connectable": true,
+  "capabilities": [
+    {
+      "id": "wx.daily",
+      "label": "城市逐日天气",
+      "templateRevision": "wx.daily@1",
+      "qualityRuleVersion": "wx-quality@1"
+    }
+  ]
+}

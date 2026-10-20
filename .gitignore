@@ -3,3 +3,6 @@ dist/
 .flow/state.json
 .data-mcps/
 *.log
+evidence/run-data/
+test/ui/.browser-check.run.js
+.playwright-cli/

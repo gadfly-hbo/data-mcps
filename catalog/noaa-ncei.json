@@ -1,0 +1,60 @@
+{
+  "id": "noaa-ncei",
+  "name": "NOAA NCEI CDO（后置）",
+  "summary": "气象/气候 REST v2：token、数据集/站点/分页有官方文档；中国城市覆盖不承诺。",
+  "domain": "天气",
+  "provider": {
+    "name": "NOAA NCEI",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "connector": {
+    "protocol": "rest",
+    "adapterVersion": null,
+    "coverage": "站点覆盖待核实；不承诺中国城市",
+    "granularity": "站点×日",
+    "latency": "待核实"
+  },
+  "status": {
+    "docsVerified": {
+      "ok": true,
+      "at": "2026-10-19",
+      "evidence": "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+    },
+    "adaptationVerified": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "accountChecked": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "envTested": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    }
+  },
+  "cost": {
+    "knownness": "unknown",
+    "note": "限流与条款待核实",
+    "checkedAt": "2026-10-19"
+  },
+  "license": {
+    "summary": "数据集条款待核实",
+    "sourceUrl": "https://www.ncei.noaa.gov/cdo-web/webservices/v2",
+    "checkedAt": "2026-10-19",
+    "exportAllowed": false,
+    "modelAllowed": false,
+    "retentionNote": "后置来源"
+  },
+  "auth": {
+    "kind": "api_key",
+    "note": "官方 token；需用户申请"
+  },
+  "exampleShape": "results[] 站点观测记录 + resultset 分页元数据（官方文档形态）",
+  "synthetic": false,
+  "connectable": false,
+  "capabilities": []
+}

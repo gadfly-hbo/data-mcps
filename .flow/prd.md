@@ -159,3 +159,20 @@
 16. **端口与启动**：默认 4173；占用即报错退出并提示 `-p` 换端口（不静默换端口）。
 
 **GRILL 收敛声明**：Round 2 结束后无新增开放问题，"GRILL converged after 2 rounds"。**升级项（全流程唯一一次）**：红队 K5——R1 退出条件修订需用户确认（见对话中的集中提问；其余实质问题无）。
+
+## REVIEW 修订记录（2026-10-20，双轴评审后收敛）
+
+**实现修正（已落地 + 测试）**：
+- 连接检查改为真实适配器握手（握手端点返回适配版本，与目录登记比对，不一致 → 工具已变化；连接记录持久化 adapterVersion 与 credentialNotice）。
+- MCP 接缝：每次 tools/call 准入前重比目录指纹（原仅连接时一次）；会话中新增工具 → 下一次调用 tool_changed 冻结（测试覆盖）。
+- 导出端点 projectId 必填（缺省 400、跨项目 403）；新增 `GET /grants/:projectId` 项目授权视图。
+- 凭据解析器接缝落地：`SessionMemoryCredentialResolver`（synthetic 引用免凭据、keychain:// 仅会话内存 + 明确提示、空引用拒绝；不扫描本机秘密/环境变量/文件）。
+- 补齐权限负例：extract=false 发送前拒绝、modelEgress 恒关（PUT true 压回 false）、stdout 日志敏感标记扫描。
+- Standards 收敛：`newId/nowUtc` 入 `core/ids.ts`；日序列统一 `core/quality.ts daySequence`；Run 构造收敛 `baseRun` 工厂；能力分发收敛 `server/capabilities.ts` 注册表（normalize/handshake/validate/execute/checkQuality 五口一处）。
+
+**记录在案的口径修订（不改动 proposal 决策）**：
+- 包 1 API 清单增补 `GET /cities`（预置城市清单，包 8 的 UI 依赖）与 `GET /grants/:projectId`；撤权写路径为 `PUT /connections/:id/grant`（grant 按 项目×连接 存放于连接记录，包 2 的 `grants/<projectId>.json` 布局相应作废，派生视图替代）。
+- 包 8 cost.knownness 枚举增补第四值 `demo_no_call`（演示无真实调用）——方案 §08「演示无调用 ≠ 供应商免费」为更高位约束。
+- 包 7 请求拓扑口径修订：默认每城一请求（maxRequests=城市数）；分页演练（pagesPerCity>1）为适配器内部逻辑页拆分，此时请求数=城市×页数，UI 如实计算显示。
+- 包 4 的 `snapshots/index.json` 不建：登记=目录扫描（`.tmp-` 前缀过滤），原子 rename 语义不变；量小可接受，R3+ 如需跨项目索引再评（handoff 已披露）。
+- `.playwright-cli/` 会话缓存移出版本控制（浏览器证据只留 evidence/ 截图与检查 JSON）。

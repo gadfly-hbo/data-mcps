@@ -1,0 +1,67 @@
+{
+  "id": "persona-synthetic",
+  "name": "合成画像样板（演示）",
+  "summary": "虚构品牌「青禾生活」的聚合年龄段分布：演示平台、观察窗 2026-09、分母 1,200、小样本抑制为原型规则。不含真实个人信息。",
+  "domain": "品牌画像",
+  "provider": {
+    "name": "data-mcps 合成夹具",
+    "url": "https://example.invalid/synthetic"
+  },
+  "connector": {
+    "protocol": "rest",
+    "adapterVersion": "persona-fixture@1",
+    "coverage": "虚构品牌 × 演示平台 × 2026-09",
+    "granularity": "品牌×平台×观察窗×年龄段",
+    "latency": "合成，无源时效"
+  },
+  "status": {
+    "docsVerified": {
+      "ok": true,
+      "at": "2026-10-20",
+      "evidence": "评审包方案.md §11 合成演示规则"
+    },
+    "adaptationVerified": {
+      "ok": true,
+      "at": "2026-10-20",
+      "evidence": "本仓夹具适配器与测试"
+    },
+    "accountChecked": {
+      "ok": false,
+      "at": "2026-10-20",
+      "evidence": null
+    },
+    "envTested": {
+      "ok": true,
+      "at": "2026-10-20",
+      "evidence": "本仓测试与浏览器证据"
+    }
+  },
+  "cost": {
+    "knownness": "demo_no_call",
+    "note": "演示无真实调用",
+    "checkedAt": "2026-10-20"
+  },
+  "license": {
+    "summary": "合成数据；不代表任何供应商口径、承诺或合规认证",
+    "sourceUrl": "https://example.invalid/synthetic",
+    "checkedAt": "2026-10-20",
+    "exportAllowed": true,
+    "modelAllowed": false,
+    "retentionNote": "合成内容可保留；禁止当作供应商结果"
+  },
+  "auth": {
+    "kind": "none",
+    "note": "合成源无需凭据（占位引用）"
+  },
+  "exampleShape": "rows: ageBand, share(%), suppressed；外层含 brand/platform/window/denominator（合成）",
+  "synthetic": true,
+  "connectable": true,
+  "capabilities": [
+    {
+      "id": "persona.ageBands",
+      "label": "品牌聚合年龄段分布",
+      "templateRevision": "persona.ageBands@1",
+      "qualityRuleVersion": "persona-quality@1"
+    }
+  ]
+}

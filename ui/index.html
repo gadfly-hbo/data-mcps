@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>data-mcps · 外部数据工作台</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+<aside class="sidebar" id="sidebar" aria-label="工作区导航"></aside>
+<button class="mobile-overlay" id="overlay" aria-label="关闭导航" hidden></button>
+<div class="workspace">
+  <header class="topbar">
+    <div class="top-left">
+      <button class="btn quiet icon-btn menu-btn" id="menu" aria-label="打开导航" aria-expanded="false">☰</button>
+      <span class="breadcrumb" id="breadcrumb">数据集市</span>
+      <span class="demo-tag">○ 本地服务 · 合成夹具<span class="extended"> · 无真实供应商调用或费用</span></span>
+    </div>
+    <div class="top-actions">
+      <span class="fine" id="mode-label">独立工作区</span>
+      <button class="btn quiet icon-btn" id="theme" aria-label="切换暗色主题">◐</button>
+    </div>
+  </header>
+  <div id="storage-message" aria-live="polite"></div>
+  <main class="content" id="main" tabindex="-1"></main>
+</div>
+<dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

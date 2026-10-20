@@ -1,0 +1,60 @@
+{
+  "id": "alpha-vantage-mcp",
+  "name": "Alpha Vantage（官方 MCP，研究候选）",
+  "summary": "金融数据商；官方仓库明示 MCP（推荐远程 OAuth 形态）。本期仅研究卡：未连接、未 OAuth、未核对工具目录。",
+  "domain": "金融",
+  "provider": {
+    "name": "Alpha Vantage",
+    "url": "https://www.alphavantage.co"
+  },
+  "connector": {
+    "protocol": "mcp",
+    "adapterVersion": null,
+    "coverage": "待核实（账户数据权限/时效/费用/许可）",
+    "granularity": "待核实",
+    "latency": "待核实"
+  },
+  "status": {
+    "docsVerified": {
+      "ok": true,
+      "at": "2026-10-19",
+      "evidence": "https://github.com/alphavantage/alpha_vantage_mcp"
+    },
+    "adaptationVerified": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "accountChecked": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "envTested": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    }
+  },
+  "cost": {
+    "knownness": "unknown",
+    "note": "费用与额度未核实",
+    "checkedAt": "2026-10-19"
+  },
+  "license": {
+    "summary": "许可、缓存与外发范围待核实",
+    "sourceUrl": "https://github.com/alphavantage/alpha_vantage_mcp",
+    "checkedAt": "2026-10-19",
+    "exportAllowed": false,
+    "modelAllowed": false,
+    "retentionNote": "仅研究候选；首期不默认启用"
+  },
+  "auth": {
+    "kind": "mcp",
+    "note": "官方 MCP（远程 OAuth 形态）；协议兼容待验证"
+  },
+  "exampleShape": "MCP tools/list 工具目录 + tools/call 结构化返回（具体工具目录未核对）",
+  "synthetic": false,
+  "connectable": false,
+  "capabilities": []
+}

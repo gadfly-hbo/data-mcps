@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "identity": {
+    "snapshotId": "snap_784ebb26d6cfd8f1",
+    "parentSnapshotId": null,
+    "createdAtUtc": "2026-10-20T02:22:56.232Z"
+  },
+  "source": {
+    "sourceId": "persona-synthetic",
+    "providerName": "data-mcps 合成夹具",
+    "protocol": "rest",
+    "adapterVersion": "persona-fixture@1",
+    "toolCatalogFingerprint": null,
+    "synthetic": true
+  },
+  "query": {
+    "capabilityId": "persona.ageBands",
+    "templateRevision": "persona.ageBands@1",
+    "connectionRevision": 1,
+    "params": {
+      "brand": "青禾生活",
+      "platform": "演示平台",
+      "window": "2026-09"
+    },
+    "paramsFingerprint": "771317388ae29dae4153288866aa7897eefbe43020707c858f2451a1b7f36bed",
+    "requestCount": 0,
+    "pageCount": 0
+  },
+  "coverage": {
+    "requested": {
+      "brand": "青禾生活",
+      "platform": "演示平台",
+      "window": "2026-09"
+    },
+    "actual": {
+      "rows": 6,
+      "incompleteReasons": [],
+      "cacheAgeHours": null,
+      "brand": "青禾生活",
+      "platform": "演示平台",
+      "window": "2026-09",
+      "denominator": 1200
+    },
+    "timezone": null,
+    "units": {
+      "share": "%"
+    },
+    "coordinates": null
+  },
+  "time": {
+    "collectedAtUtc": "2026-10-20T02:22:56.232Z",
+    "sourceUpdatedAt": "unknown",
+    "sourceTimezone": null
+  },
+  "quality": {
+    "expectedCount": null,
+    "actualCount": 6,
+    "missingKeys": [],
+    "duplicateKeys": [],
+    "fieldIssues": [
+      {
+        "field": "share",
+        "kind": "suppressed",
+        "message": "17 及以下 已按小样本抑制规则隐藏（原型规则，非供应商承诺）"
+      }
+    ],
+    "unitTimezoneOk": true,
+    "paginationComplete": true,
+    "conclusion": "complete",
+    "ruleVersion": "persona-quality@1",
+    "checkedAtUtc": "2026-10-20T02:22:56.047Z"
+  },
+  "license": {
+    "summary": "合成数据；不代表任何供应商口径、承诺或合规认证",
+    "sourceUrl": "https://example.invalid/synthetic",
+    "checkedAt": "2026-10-20",
+    "exportAllowed": true,
+    "modelAllowed": false,
+    "retentionNote": "合成内容可保留；禁止当作供应商结果",
+    "synthetic": true
+  },
+  "cost": {
+    "knownness": "demo_no_call",
+    "note": "演示无真实调用"
+  },
+  "files": [
+    {
+      "path": "content.json",
+      "sha256": "8f344d3f922d0fee970b130c33d8098636e22c4096c0c92e6bf4d18f385a70d6",
+      "size": 448
+    },
+    {
+      "path": "raw/persona.json",
+      "sha256": "05aa4e277ebd32c5c5b19db8df82a307ecf19ba75c061c2c6926c415db211bfe",
+      "size": 611
+    }
+  ],
+  "rawRetained": true,
+  "rawRetainedReason": "合成夹具许可允许保留原响应"
+}

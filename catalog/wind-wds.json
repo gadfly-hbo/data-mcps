@@ -1,0 +1,60 @@
+{
+  "id": "wind-wds",
+  "name": "Wind 数据接口服务（研究候选）",
+  "summary": "金融/商业官方 API 产品；MCP 形态未核实到可验接口。截图与公告索引不作为账户接入证明。",
+  "domain": "金融",
+  "provider": {
+    "name": "Wind",
+    "url": "https://www.wind.com.cn"
+  },
+  "connector": {
+    "protocol": "none",
+    "adapterVersion": null,
+    "coverage": "以商业合同为准",
+    "granularity": "待核实",
+    "latency": "待核实"
+  },
+  "status": {
+    "docsVerified": {
+      "ok": true,
+      "at": "2026-10-19",
+      "evidence": "https://www.wind.com.cn/mobile/WDS/sapi/zh.html"
+    },
+    "adaptationVerified": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "accountChecked": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    },
+    "envTested": {
+      "ok": false,
+      "at": "2026-10-19",
+      "evidence": null
+    }
+  },
+  "cost": {
+    "knownness": "unknown",
+    "note": "商业合同、端点/协议、字段/许可待核实",
+    "checkedAt": "2026-10-19"
+  },
+  "license": {
+    "summary": "商业合同待用户提供",
+    "sourceUrl": "https://www.wind.com.cn/mobile/WDS/sapi/zh.html",
+    "checkedAt": "2026-10-19",
+    "exportAllowed": false,
+    "modelAllowed": false,
+    "retentionNote": "未核实不接入"
+  },
+  "auth": {
+    "kind": "none",
+    "note": "待合同与文档"
+  },
+  "exampleShape": "待核实（商业合同与端点未提供）",
+  "synthetic": false,
+  "connectable": false,
+  "capabilities": []
+}

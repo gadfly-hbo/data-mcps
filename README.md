@@ -5,6 +5,12 @@ local-first 外部数据集市与采集工作台：发现 → 评估覆盖/口�
 ## 启动方式
 
 ```bash
+./start.sh        # 一键启动：检查环境 →（必要时）安装依赖 → 构建 → 启动 → 自动打开浏览器
+```
+
+等价手动步骤：
+
+```bash
 npm install
 npm run build
 node dist/cli.js ui -p 4173          # 或 npm start
